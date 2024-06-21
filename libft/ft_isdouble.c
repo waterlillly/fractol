@@ -6,7 +6,7 @@
 /*   By: lbaumeis <lbaumeis@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/21 12:45:55 by lbaumeis          #+#    #+#             */
-/*   Updated: 2024/06/21 12:47:10 by lbaumeis         ###   ########.fr       */
+/*   Updated: 2024/06/21 18:47:27 by lbaumeis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,16 @@ int	ft_isdouble(char *nbr)
 	int	d;
 
 	x = 0;
+	d = 0;
 	if (!nbr)
 		return (0);
-	if (nbr[x] == '+' || nbr[x] == '-')
+	if (nbr[x] == '+' || nbr[x] == '-' )
 		x++;
-	d = 0;
-	while (nbr[x] && ft_isdigit(nbr[x]) && d <= 1)
+	while (nbr[x] && ft_isdigit(nbr[x]))
 	{
-		if (nbr[x] == '.')
+		if (d >= 1 && nbr[x] == '.')
+			return (0);
+		else if (d < 1 && nbr[x] == '.')
 			d++;
 		x++;
 	}

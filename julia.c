@@ -6,7 +6,7 @@
 /*   By: lbaumeis <lbaumeis@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/21 12:42:50 by lbaumeis          #+#    #+#             */
-/*   Updated: 2024/06/21 13:04:53 by lbaumeis         ###   ########.fr       */
+/*   Updated: 2024/06/21 18:51:24 by lbaumeis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void	choose_julia(t_fractol *f, char **av)
 
 void	julia(t_fractol *f, char **av)
 {
-	if (av[2] && av[3] && ft_isdouble(av[2]) && ft_isdouble(av[3]))
+	if (av[2] && av[3])
 	{
 		f->j_x = ft_atof(av[2]);
 		f->j_y = ft_atof(av[3]);
