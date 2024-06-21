@@ -6,7 +6,7 @@
 /*   By: lbaumeis <lbaumeis@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/25 16:41:15 by lbaumeis          #+#    #+#             */
-/*   Updated: 2024/06/21 22:46:55 by lbaumeis         ###   ########.fr       */
+/*   Updated: 2024/06/21 23:40:05 by lbaumeis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,5 @@ int		ft_strcmp(const char *s1, const char *s2);
 int		ft_white(const char *s);
 double	ft_atod(char *s);
 int		ft_isdouble(char *nbr);
-char	*ft_dtoa(double d);
 
 #endif

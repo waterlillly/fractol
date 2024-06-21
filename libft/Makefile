@@ -7,7 +7,6 @@ CFILES += ft_strtrim.c ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c
 CFILES += ft_putendl_fd.c ft_putnbr_fd.c ft_split.c ft_itoa.c ft_strmapi.c
 CFILES += ft_printf.c ft_printchar.c ft_printstr.c ft_printnbr.c ft_printptr.c
 CFILES += ft_decideformat.c ft_strcmp.c ft_white.c ft_atod.c ft_isdouble.c
-CFILES += ft_dtoa.c
 
 OFILES = $(CFILES:.c=.o)
 
