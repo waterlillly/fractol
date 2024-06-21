@@ -6,15 +6,18 @@
 /*   By: lbaumeis <lbaumeis@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/19 13:42:38 by lbaumeis          #+#    #+#             */
-/*   Updated: 2024/06/21 14:00:37 by lbaumeis         ###   ########.fr       */
+/*   Updated: 2024/06/21 17:29:05 by lbaumeis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
 
-void	create_pixel(int x, int y, t_fractol *f, int color)
+static void	create_pixel(int x, int y, t_img *img, int color)
 {
-	(f->img.pxl_ptr[(y * f->img.len) + (x * (f->img.bpp / 8))]) = color;
+	int	offset;
+
+	offset = (y * img->len) + (x * (img->bpp / 8));
+	*(unsigned int *)(img->pxl_ptr + offset) = color;
 }
 
 void	brot_or_juli(t_complex *c, t_complex *z, t_fractol *f)
@@ -47,13 +50,14 @@ void	f_pixel(int x, int y, t_fractol *f)
 		z = add_complex(complexify(z), c);
 		if (((z.x * z.x) + (z.y * z.y)) > f->esc_value)
 		{
-			color = (int)scale(i, map_values(0x3EB489, 0xFF3300, 0, f->def_iterations));
-			create_pixel(x, y, f, color);
+			color = scale(i, map_values(POWDER_BLUE, GHOST_STORM, 0,
+				f->def_iterations));
+			create_pixel(x, y, &(f->img), color);
 			return ;
 		}
 		i++;
 	}
-	create_pixel(x, y, f, WHITE);
+	create_pixel(x, y, &(f->img), AQUA_DREAM);
 }
 
 int	f_render(t_fractol *f)

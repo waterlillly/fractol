@@ -6,7 +6,7 @@
 /*   By: lbaumeis <lbaumeis@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 17:44:48 by lbaumeis          #+#    #+#             */
-/*   Updated: 2024/06/21 14:05:21 by lbaumeis         ###   ########.fr       */
+/*   Updated: 2024/06/21 17:35:24 by lbaumeis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	error_exit(char *s, t_fractol *f)
 void	init_data(t_fractol *f)
 {
 	f->esc_value = 4;
-	f->def_iterations = 42;
+	f->def_iterations = 424;
 	f->x_move = 0.0;
 	f->y_move = 0.0;
 	f->zoom = 1.0;

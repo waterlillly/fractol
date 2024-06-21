@@ -6,7 +6,7 @@
 /*   By: lbaumeis <lbaumeis@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/19 16:24:17 by lbaumeis          #+#    #+#             */
-/*   Updated: 2024/06/21 13:39:27 by lbaumeis         ###   ########.fr       */
+/*   Updated: 2024/06/21 17:35:34 by lbaumeis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,9 @@ int key_press(int key, t_fractol *f)
 	else if (key == XK_Down)
 		f->y_move -= (0.5 * f->zoom);
 	else if (key == XK_plus)
-		f->def_iterations += 25;
+		f->def_iterations += 42;
 	else if (key == XK_minus)
-		f->def_iterations -= 25;
+		f->def_iterations -= 42;
 	f_render(f);
 	return (0);
 }
@@ -59,7 +59,7 @@ int mouse_moves(int button, int x, int y, t_fractol *f)
 	return (0);
 }
 
-
+/*
 int	julia_mapping(int x, int y, t_fractol *f)
 {
 	if (ft_strcmp(f->name, "julia"))
@@ -70,3 +70,4 @@ int	julia_mapping(int x, int y, t_fractol *f)
 	}
 	return (0);
 }
+*/

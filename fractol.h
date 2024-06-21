@@ -6,7 +6,7 @@
 /*   By: lbaumeis <lbaumeis@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 17:12:56 by lbaumeis          #+#    #+#             */
-/*   Updated: 2024/06/21 14:00:46 by lbaumeis         ###   ########.fr       */
+/*   Updated: 2024/06/21 17:35:55 by lbaumeis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,6 @@ void	init_events(t_fractol *f);
 void	init_fractol(t_fractol *f);
 
 /*RENDER*/
-void	create_pixel(int x, int y, t_fractol *f, int color);
 void	brot_or_juli(t_complex *c, t_complex *z, t_fractol *f);
 void	f_pixel(int x, int y, t_fractol *f);
 int		f_render(t_fractol *f);
@@ -88,7 +87,7 @@ t_complex	complexify(t_complex z);
 int			close_and_exit(t_fractol *f);
 int			key_press(int key, t_fractol *f);
 int			mouse_moves(int button, int x, int y, t_fractol *f);
-int			julia_mapping(int x, int y, t_fractol *f);
+//int			julia_mapping(int x, int y, t_fractol *f);
 
 /*JULIA*/
 void	choose_julia(t_fractol *f, char **av);
