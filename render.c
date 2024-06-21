@@ -6,7 +6,7 @@
 /*   By: lbaumeis <lbaumeis@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/19 13:42:38 by lbaumeis          #+#    #+#             */
-/*   Updated: 2024/06/21 17:29:05 by lbaumeis         ###   ########.fr       */
+/*   Updated: 2024/06/21 17:42:47 by lbaumeis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ void	f_pixel(int x, int y, t_fractol *f)
 		if (((z.x * z.x) + (z.y * z.y)) > f->esc_value)
 		{
 			color = scale(i, map_values(POWDER_BLUE, GHOST_STORM, 0,
-				f->def_iterations));
+						f->def_iterations));
 			create_pixel(x, y, &(f->img), color);
 			return ;
 		}

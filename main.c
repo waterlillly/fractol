@@ -6,15 +6,15 @@
 /*   By: lbaumeis <lbaumeis@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 17:12:20 by lbaumeis          #+#    #+#             */
-/*   Updated: 2024/06/21 13:44:34 by lbaumeis         ###   ########.fr       */
+/*   Updated: 2024/06/21 17:44:15 by lbaumeis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
 
-int main(int ac, char **av)
+int	main(int ac, char **av)
 {
-    t_fractol   f;
+	t_fractol	f;
 
 	if ((ac == 2 && ft_strcmp(av[1], "mandelbrot"))
 		|| (ac >= 2 && ac <= 4 && ft_strcmp(av[1], "julia")))

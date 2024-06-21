@@ -6,7 +6,7 @@
 /*   By: lbaumeis <lbaumeis@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/19 14:37:12 by lbaumeis          #+#    #+#             */
-/*   Updated: 2024/06/21 13:19:39 by lbaumeis         ###   ########.fr       */
+/*   Updated: 2024/06/21 17:47:23 by lbaumeis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,12 @@ t_map	map_values(double nl, double nh, double ol, double oh)
 	map.ol = ol;
 	map.oh = oh;
 	return (map);
-} 
+}
 
 double	scale(double i, t_map map)
 {
 	double	result;
-	
+
 	result = (map.nh - map.nl) * (i - map.ol) / (map.oh - map.ol) + map.nl;
 	return (result);
 }

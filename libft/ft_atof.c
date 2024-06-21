@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atof.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lbaumeis <lbaumeis@student.42vienna.com    +#+  +:+       +#+        */
+/*   By: lbaumeis <lbaumeis@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/17 12:10:38 by lbaumeis          #+#    #+#             */
-/*   Updated: 2024/06/19 14:47:11 by lbaumeis         ###   ########.fr       */
+/*   Updated: 2024/06/21 17:42:08 by lbaumeis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,10 @@ double	ft_atof(char *s)
 	sign = 1;
 	power = 1;
 	i = ft_white(s);
+	if (s[i] == '-')
+		sign *= -1;
 	if (s[i] == '-' || s[i] == '+')
-	{
-		if (s[i] == '-')
-			sign *= -1;
 		i++;
-	}
 	while (s[i] && s[i] != '.')
 		d = (d * 10) + (s[i++] - 48);
 	if (s[i] == '.')
