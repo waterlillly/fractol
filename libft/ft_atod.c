@@ -1,43 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdouble.c                                      :+:      :+:    :+:   */
+/*   ft_atof.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lbaumeis <lbaumeis@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/21 12:45:55 by lbaumeis          #+#    #+#             */
-/*   Updated: 2024/06/21 20:44:06 by lbaumeis         ###   ########.fr       */
+/*   Created: 2024/06/17 12:10:38 by lbaumeis          #+#    #+#             */
+/*   Updated: 2024/06/21 21:37:00 by lbaumeis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isdouble(char *nbr)
+double	ft_atod(char *s)
 {
-	size_t	x;
-	int		d;
+	long	d;
+	double	f;
+	double	power;
+	int		sign;
+	int		i;
 
-	x = 0;
 	d = 0;
-	if (!nbr)
-		return (0);
-	if (nbr[x] == '+' || nbr[x] == '-' )
-		x++;
-	while (nbr[x])
+	f = 0;
+	sign = 1;
+	power = 1;
+	i = ft_white(s);
+	if (s[i] == '-')
+		sign *= -1;
+	if (s[i] == '-' || s[i] == '+')
+		i++;
+	while (s[i] && s[i] != '.')
+		d = (d * 10) + (s[i++] - 48);
+	if (s[i] == '.')
+		i++;
+	while (s[i])
 	{
-		if (ft_isdigit(nbr[x]))
-		{
-			x++;
-			if (d >= 1 && nbr[x] == '.')
-				return (0);
-			else if (d < 1 && nbr[x] == '.')
-			{
-				d++;
-				x++;
-			}
-		}
+		power /= 10;
+		f = f + (s[i++] - 48) * power;
 	}
-	if (x == ft_strlen(nbr) && nbr[x - 1] != '.')
-		return (1);
-	return (0);
+	return ((d + f) * sign);
 }

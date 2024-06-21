@@ -6,7 +6,7 @@
 /*   By: lbaumeis <lbaumeis@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 17:44:48 by lbaumeis          #+#    #+#             */
-/*   Updated: 2024/06/21 17:45:46 by lbaumeis         ###   ########.fr       */
+/*   Updated: 2024/06/21 20:21:22 by lbaumeis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,8 +59,3 @@ void	init_fractol(t_fractol *f)
 	init_events(f);
 	init_data(f);
 }
-
-/*
-mlx_hook(f->mlx_win, ButtonPress, ButtonPressMask, mouse_moves, f);
-mlx_hook(f->mlx_win, MotionNotify, PointerMotionMask, julia_mapping, f);
-*/
