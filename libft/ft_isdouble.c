@@ -34,6 +34,8 @@ int	ft_isdouble(char *nbr)
 				x++;
 			}
 		}
+		else
+			break ;
 	}
 	if (x == ft_strlen(nbr) && nbr[x - 1] != '.')
 		return (1);
