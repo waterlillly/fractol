@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   fractol.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lbaumeis <lbaumeis@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lbaumeis <lbaumeis@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 17:12:56 by lbaumeis          #+#    #+#             */
-/*   Updated: 2024/06/21 23:35:01 by lbaumeis         ###   ########.fr       */
+/*   Updated: 2024/06/29 08:03:13 by lbaumeis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 # include <X11/keysym.h>
 # include <X11/keysymdef.h>
 # include <X11/ap_keysym.h>
-# include <mlx.h>
+# include <../mlx_linux/mlx.h>
 # include <errno.h>
 # include <error.h>
 

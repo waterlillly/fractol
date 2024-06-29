@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: lbaumeis <lbaumeis@student.42.fr>          +#+  +:+       +#+         #
+#    By: lbaumeis <lbaumeis@student.42vienna.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/17 14:08:48 by lbaumeis          #+#    #+#              #
-#    Updated: 2024/06/21 19:05:25 by lbaumeis         ###   ########.fr        #
+#    Updated: 2024/06/29 08:11:11 by lbaumeis         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ all: $(P_NAME)
 
 $(P_NAME): $(OBJ)
 	($(MAKE) -C ./libft)
-	$(CC) $(OBJ) ./libft/libft.a -lmlx -lXext -lX11 -lm -lz -o $(P_NAME)
+	$(CC) $(OBJ) ./libft/libft.a -Lmlx_linux -lmlx_Linux -L/usr/lib -Imlx_linux -lXext -lX11 -lm -lz -o $(P_NAME)
 
 clean:
 	($(MAKE) -C ./libft clean)
