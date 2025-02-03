@@ -11,7 +11,7 @@
 # **************************************************************************** #
 
 CC = cc
-CFILES = main.c init.c complex.c render.c mlx_events.c julia.c
+CFILES = src/main.c src/init.c src/complex.c src/render.c src/mlx_events.c src/julia.c
 OBJ = $(CFILES:.c=.o)
 %.o: %.c
 	$(CC) -Wall -Wextra -Werror -g -I/usr/include -Imlx_linux -O3 -c $< -o $@
